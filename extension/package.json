@@ -1,0 +1,112 @@
+{
+  "name": "taskninja",
+  "displayName": "TaskNinja",
+  "description": "This is a Task Manager for coders to keep track of their Coding Work-Flow",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.76.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:taskninja.helloWorld",
+    "onCommand:taskninja.askQuestion",
+    "onCommand:taskninja.refresh",
+    "onCommand:taskninja.addTask",
+    "onCommand:taskninja.authenticateUser",
+    "onView:taskninja-sidebar"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "taskNinja-sidebar-view",
+          "title": "TaskNinja",
+          "icon": "media/Ninja.svg"
+        }
+      ]
+    },
+    "views": {
+      "taskNinja-sidebar-view": [
+        {
+          "type": "webview",
+          "id": "taskninja-sidebar",
+          "name": "TaskNinja",
+          "icon": "media/Ninja.svg",
+          "contextualTitle": "TaskNinja"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "taskninja.helloWorld",
+        "category": "TaskNinja",
+        "title": "Hello World"
+      },
+      {
+        "command": "taskninja.askQuestion",
+        "category": "TaskNinja",
+        "title": "Ask Question"
+      },
+      {
+        "command": "taskninja.refresh",
+        "category": "TaskNinja",
+        "title": "Refresh WebViews"
+      },
+      {
+        "command": "taskninja.addTask",
+        "category": "TaskNinja",
+        "title": "Add Task"
+      },
+      {
+        "command": "taskninja.authenticateUser",
+        "category": "TaskNinja",
+        "title": "Authenticate User"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "concurrently \"rollup -c -w --bundleConfigAsCjs\" \"webpack --watch\"",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-terser": "^0.4.0",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@tsconfig/svelte": "^3.0.0",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/polka": "^0.5.4",
+    "@types/vscode": "^1.76.0",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "@vscode/test-electron": "^2.2.3",
+    "concurrently": "^7.6.0",
+    "eslint": "^8.34.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "rollup": "^2.3.4",
+    "rollup-plugin-svelte": "^6.0.0",
+    "svelte": "^3.57.0",
+    "svelte-check": "^3.1.4",
+    "svelte-preprocess": "^5.0.3",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.5",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "dependencies": {
+    "polka": "^0.5.2"
+  }
+}
