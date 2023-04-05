@@ -59,10 +59,10 @@ export function activate(context: vscode.ExtensionContext) {
       const text = activeTextEditor.document.getText(
         activeTextEditor.selection
       );
-      vscode.window.showInformationMessage(`Selected text: ${text}`);
+      // vscode.window.showInformationMessage(`Selected text: ${text}`);
 
       sidebarProvider._view?.webview.postMessage({
-        type: "new-task",
+        type: "new-todo",
         value: text,
       });
     })
