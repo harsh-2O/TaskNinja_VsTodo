@@ -11,10 +11,10 @@
 
 
 ## ScreenShots
-![1st ScreenShot](/SS/1.png)
-![2st ScreenShot](/SS/2.png)
-![3st ScreenShot](/SS/3.png)
 ![4st ScreenShot](/SS/4.png)
+![2st ScreenShot](/SS/2.png)
+![1st ScreenShot](/SS/1.png)
+
 
 ## Installation guide
 
