@@ -38,7 +38,7 @@ Once the prerequisites are installed, clone the repository and navigate to the p
 > - MySQL: 
     TaskNinja uses MySQL database to store the user data, including their tasks and authentication details.
 
-> -GitHub Authentication: 
+> - GitHub Authentication: 
     TaskNinja uses GitHub Authentication to authenticate users and allow them to access their data stored in the MySQL database.
 
 > - Webpack: 
