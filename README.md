@@ -71,7 +71,7 @@ npm install -D @types/cors @types/express @types/jsonwebtoken @types/node @types
 
 Contributions are always welcome!
 
-See `contributing.md` for ways to get started.
+See `contribution.md` for ways to get started.
 
 Please adhere to this project's `code of conduct`.
 
